@@ -1,0 +1,20 @@
+@use "sass:meta";
+@use "sass:map";
+@use "sizes";
+@use "colors";
+@import '_colors';
+@import '_sizes';
+
+$layoutRaw: meta.module-variables("sizes");
+$layoutExc: map.get($layoutRaw, "excludes");
+$layoutVar: map.remove($layoutRaw, "excludes", $layoutExc...);
+$colorRaw: meta.module-variables("colors");
+$colorVar: map.remove($colorRaw, "colors");
+
+$allVar: map.merge($layoutVar, $colorVar);
+
+:root {
+  @each $key, $val in $allVar {
+    --#{$key}: #{$val};
+  }
+}

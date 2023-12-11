@@ -1,0 +1,133 @@
+$color-n-0: #FFFFFF;
+$color-n-900: #232322;
+
+$color-olive-100: #F6F5F0;
+$color-olive-200: #e5e1d4;
+$color-olive-300: #d4cdb7;
+$color-olive-400: #c2b99a;
+$color-olive-500: #b1a67d;
+$color-olive-600: #9f9260;
+$color-olive-700: #82774e;
+$color-olive-800: #655d3d;
+$color-olive-900: #48422b;
+
+$color-caramel-100: #f8f4ef;
+$color-caramel-200: #eadfce;
+$color-caramel-300: #dcc9ae;
+$color-caramel-400: #ceb48e;
+$color-caramel-500: #c09e6d;
+$color-caramel-600: #b2884d;
+$color-caramel-700: #92703f;
+$color-caramel-800: #715731;
+$color-caramel-900: #513e23;
+
+$color-oyster-100: #f4f3f3;
+$color-oyster-200: #dddddc;
+$color-oyster-300: #c6c6c4;
+$color-oyster-400: #afafac;
+$color-oyster-500: #989895;
+$color-oyster-600: #82817d;
+$color-oyster-700: #6a6966;
+$color-oyster-800: #535250;
+$color-oyster-900: #3b3a39;
+
+$color-cherry-100: #fcedeb;
+$color-cherry-200: #f5c8c3;
+$color-cherry-300: #efa49b;
+$color-cherry-400: #e97f73;
+$color-cherry-500: #e25a4b;
+$color-cherry-600: #dc3623;
+$color-cherry-700: #b42c1d;
+$color-cherry-800: #8c2216;
+$color-cherry-900: #641810;
+
+$color-matcha-100: #cfe9de;
+$color-matcha-200: #afdbc7;
+$color-matcha-300: #8fcdb1;
+$color-matcha-400: #6fbe9b;
+$color-matcha-500: #4fb084;
+$color-matcha-600: #41906c;
+$color-matcha-700: #327054;
+$color-matcha-800: #24503c;
+$color-matcha-900: #163024;
+
+
+$colors: (
+  'color-n-0': $color-n-0,
+  'color-n-900': $color-n-900,
+  'color-olive-100': $color-olive-100,
+  'color-olive-200': $color-olive-200,
+  'color-olive-300': $color-olive-300,
+  'color-olive-400': $color-olive-400,
+  'color-olive-500': $color-olive-500,
+  'color-olive-600': $color-olive-600,
+  'color-olive-700': $color-olive-700,
+  'color-olive-800': $color-olive-800,
+  'color-olive-900': $color-olive-900,
+  'color-caramel-100': $color-caramel-100,
+  'color-caramel-200': $color-caramel-200,
+  'color-caramel-300': $color-caramel-300,
+  'color-caramel-400': $color-caramel-400,
+  'color-caramel-500': $color-caramel-500,
+  'color-caramel-600': $color-caramel-600,
+  'color-caramel-700': $color-caramel-700,
+  'color-caramel-800': $color-caramel-800,
+  'color-caramel-900': $color-caramel-900,
+  'color-oyster-100': $color-oyster-100,
+  'color-oyster-200': $color-oyster-200,
+  'color-oyster-300': $color-oyster-300,
+  'color-oyster-400': $color-oyster-400,
+  'color-oyster-500': $color-oyster-500,
+  'color-oyster-600': $color-oyster-600,
+  'color-oyster-700': $color-oyster-700,
+  'color-oyster-800': $color-oyster-800,
+  'color-oyster-900': $color-oyster-900,
+  'color-cherry-100': $color-cherry-100,
+  'color-cherry-200': $color-cherry-200,
+  'color-cherry-300': $color-cherry-300,
+  'color-cherry-400': $color-cherry-400,
+  'color-cherry-500': $color-cherry-500,
+  'color-cherry-600': $color-cherry-600,
+  'color-cherry-700': $color-cherry-700,
+  'color-cherry-800': $color-cherry-800,
+  'color-cherry-900': $color-cherry-900,
+  'color-matcha-100': $color-matcha-100,
+  'color-matcha-200': $color-matcha-200,
+  'color-matcha-300': $color-matcha-300,
+  'color-matcha-400': $color-matcha-400,
+  'color-matcha-500': $color-matcha-500,
+  'color-matcha-600': $color-matcha-600,
+  'color-matcha-700': $color-matcha-700,
+  'color-matcha-800': $color-matcha-800,
+  'color-matcha-900': $color-matcha-900,
+);
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+
+  .text-#{$name} {
+    color: $color !important;
+  }
+
+  .border-#{$name} {
+    border: 1px solid $color !important;
+  }
+
+  .border-top-#{$name} {
+    border-top: 1px solid $color !important;
+  }
+
+  .border-right-#{$name} {
+    border-right: 1px solid $color !important;
+  }
+
+  .border-bottom-#{$name} {
+    border-bottom: 1px solid $color !important;
+  }
+
+  .border-left-#{$name} {
+    border-left: 1px solid $color !important;
+  }
+}

@@ -1,0 +1,150 @@
+// SIZE
+$size-0: 0px;
+$size-0-25: 1px;
+$size-0-5: 2px;
+$size-1: 4px;
+$size-1-5: 6px;
+$size-2: 8px;
+$size-2-5: 10px;
+$size-3: 12px;
+$size-3-5: 14px;
+$size-4: 16px;
+$size-4-5: 18px;
+$size-5: 20px;
+$size-6: 24px;
+$size-6-5: 26px;
+$size-7: 28px;
+$size-8: 32px;
+$size-9: 36px;
+$size-10: 40px;
+$size-11: 44px;
+$size-12: 48px;
+$size-14: 56px;
+$size-15: 60px;
+$size-16: 64px;
+$size-20: 80px;
+$size-24: 96px;
+$size-28: 112px;
+$size-32: 128px;
+$size-36: 144px;
+$size-40: 160px;
+$size-44: 176px;
+$size-48: 192px;
+$size-52: 208px;
+$size-56: 224px;
+$size-60: 240px;
+$size-64: 256px;
+$size-72: 288px;
+$size-80: 320px;
+$size-96: 384px;
+$size-100: 400px;
+
+$sizes: (
+  "0": $size-0,
+  "0-25": $size-0-25,
+  "0-5": $size-0-5,
+  "1": $size-1,
+  "1-5": $size-1-5,
+  "2": $size-2,
+  "2-5": $size-2-5,
+  "3": $size-3,
+  "3-5": $size-3-5,
+  "4": $size-4,
+  "4-5": $size-4-5,
+  "5": $size-5,
+  "6": $size-6,
+  "6-5": $size-6-5,
+  "7": $size-7,
+  "8": $size-8,
+  "9": $size-9,
+  "10": $size-10,
+  "11": $size-11,
+  "12": $size-12,
+  "14": $size-14,
+  "15": $size-15,
+  "16": $size-16,
+  "20": $size-20,
+  "24": $size-24,
+  "28": $size-28,
+  "32": $size-32,
+  "36": $size-36,
+  "40": $size-40,
+  "44": $size-44,
+  "48": $size-48,
+  "52": $size-52,
+  "56": $size-56,
+  "60": $size-60,
+  "64": $size-64,
+  "72": $size-72,
+  "80": $size-80,
+  "96": $size-96,
+  "100": $size-100,
+);
+
+
+// BREAKPOINTS
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+$breakpoints: (
+  'sm': $breakpoint-sm,
+  'md': $breakpoint-md,
+  'lg': $breakpoint-lg,
+  'xl': $breakpoint-xl,
+  '2xl': $breakpoint-2xl,
+);
+
+// SIDE
+$all-side : '';
+$top      : "-top";
+$bottom   : "-bottom";
+$left     : "-left";
+$right    : "-right";
+
+$sides: (
+  '': $all-side,
+  't': $top,
+  'b': $bottom,
+  'l': $left,
+  'r': $right,
+);
+
+$excludes: (
+  "sizes",
+  "breakpoints",
+  "all-side",
+  "top",
+  "bottom",
+  "left",
+  "right",
+  "sides",
+);
+
+// Margin and Padding Classes
+@each $p, $prop in (m: margin, p: padding) {
+  @each $s, $side in $sides{
+    @each $key, $size in $sizes{
+      .#{$p}#{$s}-#{$key} { #{$prop}#{$side} : $size !important;}
+    }
+  }
+  @each $key, $size in $sizes{
+    .#{$p}x-#{$key} { 
+      #{$prop}-left   : $size !important;
+      #{$prop}-right  : $size !important;
+    }
+    .#{$p}y-#{$key} { 
+      #{$prop}-top     : $size !important;
+      #{$prop}-bottom  : $size !important;
+    }
+  }
+}
+
+@each $key, $size in $sizes {
+  .text-#{$key} {
+    font-size: $size !important;
+  }
+}
