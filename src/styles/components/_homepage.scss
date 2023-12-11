@@ -1,0 +1,30 @@
+.homepage {
+  height: calc(100vh - 62px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__title {
+    font-size: 36px;
+    margin-bottom: 28px;
+    font-weight: 700;
+    color: $color-olive-700;
+  }
+  &__desc {
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    text-align: center;
+    color: $color-olive-900;
+  }
+  &__button {
+    background-color: $color-caramel-700;
+    color: $color-n-0;
+    padding: 16px;
+    border-radius: 8px;
+    transition: 150ms ease-out;
+    &:hover {
+      background-color: $color-caramel-600;
+    }
+  }
+}
